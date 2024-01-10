@@ -21,20 +21,28 @@ body {
   */
   font-family: "Volkhov", serif;
   font-weight: 700;
+  background:var(--color-secundario);
+}
+/*Creacion de una pseudoclase*/
+:root{
+  --color-principal: #ffffff;
+  --color-secundario: #000;
+  --color-tercero:#4e1275;
 }
 
 nav {
   /*Los colores se pueden expresar en exadecimal 
     o con el nombre del color
     */
-  background: #191819;
+  background: var(--color-secundario);
   height: 83px;
   width: 100%;
 }
 
 label.logo {
   font-family: "Dancing Script", cursive;
-  color: #ffffff;
+  /*color: #ffffff;*/
+  color: var(--color-principal);
   font-size: 32px;
   padding: 0 100px;
   font-weight: bold;
@@ -53,7 +61,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #ffffff;
+  color: var(--color-principal);
   font-size: 17px;
   text-transform: uppercase;
   line-height: 60px;
@@ -67,7 +75,7 @@ a:hover {
 .checkbtn {
   display: none;
   font-size: 32px;
-  color: #ffffff;
+  color: var(--color-principal);
   float: right;
   line-height: 80px;
   margin-right: 40px;
@@ -100,7 +108,7 @@ va a tomar las siguientes configuraciones
     position: fixed;
     width: 100%;
     height: 100%;
-    background: #000;
+    background: var(--color-secundario);
     top: 80px;
     left: -100%;
     /*Centrara el menu cuando sea pantalla pequeña*/
@@ -154,7 +162,7 @@ section {
 }
 
 .card-list .card-item {
-  background: #ffffff;
+  background: var(--color-principal);
   padding: 20px;
   border-radius: 10px;
   list-style: none;
@@ -167,3 +175,15 @@ section {
   border-radius: 10px;
   object-fit: cover;
 }
+
+/*Footer*/
+
+footer{
+  /*RELATIVO PARA QUE QUEDE AL FONDO DE LA PÁGINA*/
+  position: relative;
+  background: var(--color-tercero);
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+/*Footer*/
