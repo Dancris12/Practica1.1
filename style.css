@@ -21,13 +21,17 @@ body {
   */
   font-family: "Volkhov", serif;
   font-weight: 700;
-  background:var(--color-secundario);
+  background: var(--color-secundario);
 }
 /*Creacion de una pseudoclase*/
-:root{
+:root {
   --color-principal: #ffffff;
   --color-secundario: #000;
-  --color-tercero:#4e1275;
+  --color-tercero: #4e1275;
+  --facebook-color: #1919e4;
+  --X-color: #1883e7;
+  --instagram-color: #a00e68;
+  --youtube-color: #ff0000;
 }
 
 nav {
@@ -178,7 +182,7 @@ section {
 
 /*Footer*/
 
-footer{
+footer {
   /*RELATIVO PARA QUE QUEDE AL FONDO DE LA PÁGINA*/
   position: relative;
   background: var(--color-tercero);
@@ -187,3 +191,88 @@ footer{
   left: 0;
 }
 /*Footer*/
+footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  background: var(--color-principal);
+}
+
+footer .content {
+  max-width: 1280px;
+  margin: auto;
+  padding: 30px 40px 40px 40px;
+}
+
+footer .content .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.content .top .logo-details {
+  color: var(--color-principal);
+  font-size: 32px;
+}
+
+.content .top .media-icons {
+  display: flex;
+}
+
+.content .top .media-icons a {
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  color: var(--color-principal);
+  font-size: 19px;
+  text-decoration: none;
+  line-height: 40px;
+}
+
+/*nth-child: Personaliza cada elemento de una lista*/
+.top .media-icons a:nth-child(1) {
+  background: var(--facebook-color);
+}
+
+.top .media-icons a:nth-child(1):hover {
+  color: var(--facebook-color);
+  background: var(--color-principal);
+}
+
+.top .media-icons a:nth-child(2) {
+  background: var(--X-color);
+}
+
+.top .media-icons a:nth-child(2):hover {
+  color: var(--X-color);
+  background: var(--color-principal);
+}
+
+.top .media-icons a:nth-child(3) {
+  background: var(--instagram-color);
+}
+
+.top .media-icons a:nth-child(3):hover {
+  color: var(--instagram-color);
+  background: var(--color-principal);
+}
+
+.top .media-icons a:nth-child(4) {
+  background: var(--youtube-color);
+}
+
+.top .media-icons a:nth-child(4):hover {
+  color: var(--youtube-color);
+  background: var(--color-principal);
+}
+
+footer .content .link-boxes{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
